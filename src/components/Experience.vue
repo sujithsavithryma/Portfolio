@@ -1,7 +1,12 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, TransitionGroup, defineProps, watchEffect } from 'vue'
 
-const workExperience = [
+const props = defineProps(['aboutLoaded']);
+
+
+const showTitle = ref(false);
+const workExperience = ref([]);
+const items = [
     {
         id: 1,
         designation: 'Tech Lead',
@@ -32,7 +37,7 @@ const workExperience = [
         skillSet: ['Angular', 'Angular Material', 'Ngx-Translate', 'Typescript', 'Architecture',]
     },
     {
-         id: 3,
+        id: 3,
         designation: 'Front end Developer',
         organization: 'Expian Technologies Pvt Ltd (The Scalers)',
         url: 'https://thescalers.com/',
@@ -73,38 +78,53 @@ const workExperience = [
     }
 ];
 
+watchEffect(() => {
+    if (props.aboutLoaded) {
+        showTitle.value = true;
+
+        for (let i = 0; i <= items.length; i++) {
+            setTimeout(() => {
+                workExperience.value.push(items[i]);
+            }, i * 10)
+        }
+    }
+})
+
+
 </script>
 <template>
-    <section id="experience" class="py-20">
+    <section v-if="showTitle" id="experience" class="section py-20">
         <h3 class="text-3xl text-emerald-400 mb-10 text-center">Work Experience</h3>
-        <div class="px-10">
+        <div class="px-10" v-if="workExperience.length">
             <ul
                 class="relative before:absolute before:top-[10px] before:left-[0] before:border-l-1  before:border-emerald-800 before:h-full ">
-
-                <li v-for="work of workExperience" :key="work.id"
-                    class="relative pl-10 before:absolute before:top-[6px] before:left-[-12px] before:h-6 before:w-6 before:border-1 before:border-emerald-800 before:bg-gray-900 before:rounded-full">
-                    <div class="flex flex-col gap-1 mb-10">
-                        <h4 class="text-2xl font-semibold text-slate-300">{{ work.designation }}</h4>
-                        <div class="flex flex-col gap-2 mb-2">
-                            <a class="link text-emerald-400 text-lg after:bg-emerald-400" v-if="work.url" :href="work.url">
-                                {{ work.organization }}
-                            </a>
-                            <a class="text-emerald-400 text-lg" v-else> {{ work.organization }}</a>
-                            <h5
-                                class="relative pl-5 text-slate-500 text-md before:absolute before:left-[0] before:top-[8px] before:h-2 before:w-2 before:bg-slate-500 before:rounded-full">
-                                {{ work.period }}</h5>
-                        </div>
-                        <p class="mb-2" v-html="work.description"></p>
-                        <ul class="pl-10 list-disc mb-4 flex flex-col gap-2">
-                            <li v-for="point of work.points">{{ point }}</li>
-                        </ul>
-                        <ul class="flex flex-wrap gap-2">
-                            <li class="px-4 py-2 
+                <TransitionGroup name="fade" tag="li">
+                    <li v-for="work in workExperience" :key="work"
+                        class="relative pl-10 before:absolute before:top-[6px] before:left-[-12px] before:h-6 before:w-6 before:border-1 before:border-emerald-800 before:bg-gray-900 before:rounded-full">
+                        <div v-if="work" class="flex flex-col gap-1 mb-10">
+                            <h4 class="text-2xl font-semibold text-slate-300">{{ work.designation }}</h4>
+                            <div class="flex flex-col gap-2 mb-2">
+                                <a class="link text-emerald-400 text-lg after:bg-emerald-400" v-if="work.url"
+                                    :href="work.url">
+                                    {{ work.organization }}
+                                </a>
+                                <a class="text-emerald-400 text-lg" v-else> {{ work.organization }}</a>
+                                <h5
+                                    class="relative pl-5 text-slate-500 text-md before:absolute before:left-[0] before:top-[8px] before:h-2 before:w-2 before:bg-slate-500 before:rounded-full">
+                                    {{ work.period }}</h5>
+                            </div>
+                            <p class="mb-2" v-html="work.description"></p>
+                            <ul class="pl-10 list-disc mb-4 flex flex-col gap-2">
+                                <li v-for="point of work.points">{{ point }}</li>
+                            </ul>
+                            <ul class="flex flex-wrap gap-2">
+                                <li class="px-4 py-2 
                                 border-1 rounded-lg text-xs hover:bg-slate-600 cursor-pointer"
-                                v-for="skill of work.skillSet">{{ skill }}</li>
-                        </ul>
-                    </div>
-                </li>
+                                    v-for="skill of work.skillSet">{{ skill }}</li>
+                            </ul>
+                        </div>
+                    </li>
+                </TransitionGroup>
             </ul>
         </div>
     </section>

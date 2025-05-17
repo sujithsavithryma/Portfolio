@@ -2,9 +2,9 @@
 import { FaHouseUser } from "vue-icons-plus/fa";
 import { GrContact } from "vue-icons-plus/gr";
 import { BsPersonWorkspace } from "vue-icons-plus/bs";
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
-const activeLink = ref('about');
+const activeLink = ref('');
 const activeIconClass = 'scale-120';
 const hoverIconClass = 'group-hover:scale-120 group-hover:text-emerald-400';
 const activeTextClass = 'translate-x-2';
@@ -12,17 +12,43 @@ const hoverTextClass = 'group-hover:translate-x-2 group-hover:text-emerald-400';
 const activeTextColor = 'text-slate-100';
 const inactiveTextColor = 'text-slate-600';
 
+function updateActiveSection() {
+    const sections = document.querySelectorAll('.section');
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+    sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const sectionTop = rect.top + window.scrollY;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom && activeLink.value !== section.id) {
+            activeLink.value = section.id;
+        }
+    });
+}
+
+onMounted(() => {
+    window.addEventListener('scroll', updateActiveSection);
+    const hashs = window.location.hash.split('#');
+    if (hashs.length > 1) {
+      window.location = ''
+    }
+    updateActiveSection();
+})
+
+onBeforeUnmount(() => {
+    window.removeEventListener('scroll', updateActiveSection);
+})
+
 </script>
 <template>
     <header class="header hidden sticky top-0 lg:flex xl:flex 2xl:flex
     lg:flex-col xl:flex-col 2xl:flex-col w-[200px] h-screen lg:justify-center">
         <nav>
             <ul class="w-max flex flex-col gap-10">
-                <li class="group" :class="[activeLink === 'about' ? activeTextColor : inactiveTextColor]">
-                    <a href="#about" class="flex items-center gap-1" @click="activeLink = 'about'">
-                        <FaHouseUser :class="[activeLink === 'about' ? activeIconClass : hoverIconClass]"
+                <li class="group" :class="[activeLink === '' ? activeTextColor : inactiveTextColor]">
+                    <a href="#" class="flex items-center gap-1" @click="activeLink = ''">
+                        <FaHouseUser :class="[activeLink === '' ? activeIconClass : hoverIconClass]"
                             class="transition-all" />
-                        <span :class="[activeLink === 'about' ? activeTextClass : hoverTextClass]" class="transition-all">About</span>
+                        <span :class="[activeLink === '' ? activeTextClass : hoverTextClass]" class="transition-all">About</span>
                     </a>
                 </li>
                 <li class="group" :class="[activeLink === 'experience' ? activeTextColor : inactiveTextColor]">

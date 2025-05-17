@@ -1,24 +1,28 @@
 <script setup>
-import { ref, TransitionGroup, Transition } from 'vue'
+import { ref, TransitionGroup, Transition, defineEmits } from 'vue'
 import Appear from './Appear.vue'
 
 const showImage = ref(false);
 const arr = ref([]);
+
+const emit = defineEmits(['loaded'])
 
 for (let i = 1; i < 6; i++) {
     setTimeout(() => {
         arr.value.push(i);
         if (i === 5) {
             showImage.value = true;
+            emit('loaded')
         }
     }, 100 * i);
 }
 
+
 </script>
 <template>
-    <section id="about" class="flex flex-col
-        py-10 px-10 items-center gap-8 lg:items-start lg:py-32 lg:flex-row">
-        <div class="flex justify-center lg:justify-start">
+    <section class="section flex flex-col
+        py-10 px-10 items-center gap-8 lg:items-start lg:py-60 lg:flex-row lg:h-screen">
+        <div class="flex justify-center lg:justify-start min-w-full lg:min-w-[400px]">
 
             <TransitionGroup name="fade" tag="div">
                 <div class="fade-in-items" v-for="item in arr" :key="item">
