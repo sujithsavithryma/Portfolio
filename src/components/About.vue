@@ -14,7 +14,7 @@ for (let i = 1; i < 6; i++) {
             showImage.value = true;
             emit('loaded')
         }
-    }, 450 * i);
+    }, 100 * i);
 }
 
 
