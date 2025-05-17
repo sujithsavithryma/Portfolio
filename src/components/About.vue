@@ -16,20 +16,21 @@ for (let i = 1; i < 6; i++) {
 
 </script>
 <template>
-    <section id="about" class="flex py-54 gap-5 min-h-screen">
-        <div class="flex flex-col w-[700px]">
+    <section id="about" class="flex flex-col
+        py-10 px-10 items-center gap-8 lg:items-start lg:py-32 lg:flex-row">
+        <div class="flex justify-center lg:justify-start">
 
             <TransitionGroup name="fade" tag="div">
                 <div class="fade-in-items" v-for="item in arr" :key="item">
-                    <h4 v-if="item === 1" class="text-emerald-400 text-xl">Hi, my name is</h4>
-                    <h1 v-if="item === 2" class="text-8xl font-bold text-slate-300 mb-5">Sujith</h1>
+                    <h4 v-if="item === 1" class="text-emerald-400 text-xl text-center lg:text-left">Hi, my name is</h4>
+                    <h1 v-if="item === 2" class="text-8xl font-bold text-slate-300 mb-5 text-center lg:text-left">Sujith</h1>
                     <!-- <h2 v-if="item === 3" class="text-2xl font-normal text-slate-300 mb-10">Front-end Engineer</h2> -->
-                    <p v-if="item === 4" class="text-2xl mb-10">I am a passionate engineer who loves to build solid and
+                    <p v-if="item === 4" class="text-2xl mb-10 text-center lg:text-left">I am a passionate engineer who loves to build solid and
                         scalable front-end products.
                         Currently I am Tech Lead at Expian Technologies Bengaluru
                     </p>
-                    <div v-if="item === 5">
-                        <ul class="ml-5 list-disc text-xl">
+                    <div v-if="item === 5" class="flex justify-center lg:justify-start">
+                        <ul class="ml-5 list-disc text-xl ">
                             <li class="pb-2"><b class="text-emerald-400">10 years</b> of experience in front-end technologies</li>
                             <li class="pb-2">Expert in <a href="https://angular.dev/" class="link text-emerald-400 after:bg-emerald-400">Angular</a>; Built a ton of applications</li>
                             <li class="pb-2">Gaining hands-on experience with <a href="https://vuejs.org/" class="link text-emerald-400 after:bg-emerald-400">Vue.js</a>,
@@ -41,10 +42,10 @@ for (let i = 1; i < 6; i++) {
             </TransitionGroup>
 
         </div>
-        <div class="w-[400px]">
+        <div class="w-[300px] lg:w-[400px]">
             <Transition name="slideIn">
                 <div v-if="showImage"
-                    class="flex items-center  justify-center w-[400px] h-[340px] awesome-border rounded-[1vw] shadow-xl/30 shadow-emerald-400">
+                    class="flex items-center  justify-center w-[300px] h-[255px] lg:w-[400px] lg:h-[340px] awesome-border rounded-[1vw] shadow-xl/30 shadow-emerald-400">
                     <img class="rounded-[1vw] w-[98%]" src="../assets/Sujith.jpg" alt="Image of Sujith">
                 </div>
             </Transition>

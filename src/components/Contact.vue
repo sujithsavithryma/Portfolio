@@ -1,8 +1,9 @@
 <template>
-    <section id="contact" class="min-h-screen py-54 max-w-[700px] text-center">
-        <h3 class="text-6xl text-emerald-400 mb-10">Get In Touch</h3>
+    <section id="contact" class="py-10 max-w-[700px] flex flex-col items-center 
+         lg:my-100">
+        <h3 class="text-6xl text-emerald-400 mb-10 ">Get In Touch</h3>
         <div class="flex flex-col mb-10 text-center">
-            <p class="text-2xl">I'm currently open to new opportunities and ready to join immediately. Whether you have
+            <p class="text-2xl px-10">I'm currently open to new opportunities and ready to join immediately. Whether you have
                 a role to discuss, suggestions to share, or simply want to connect—feel free to reach out via 
                 <a class="link text-cyan-400
                     after:bg-cyan-400"

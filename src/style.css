@@ -99,3 +99,21 @@
     transform: rotate(360deg);
   }
 }
+
+/* @media (max-width:1200px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .hero-container {
+    width: 100%;
+  }
+  .header {
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width:1300px) {
+  .hero-container {
+    width: 600px;
+  }
+} */

@@ -4,7 +4,7 @@
     import Contact from './Contact.vue'
 </script>
 <template>
-    <main class="flex flex-col">
+    <main class="flex flex-col sm:items-center ">
         <About />
         <Experience />
         <Contact />

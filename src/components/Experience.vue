@@ -75,17 +75,17 @@ const workExperience = [
 
 </script>
 <template>
-    <section id="experience" class="min-h-screen py-10">
+    <section id="experience" class="py-20">
         <h3 class="text-3xl text-emerald-400 mb-10 text-center">Work Experience</h3>
-        <div class="px-2">
+        <div class="px-10">
             <ul
                 class="relative before:absolute before:top-[10px] before:left-[0] before:border-l-1  before:border-emerald-800 before:h-full ">
 
                 <li v-for="work of workExperience" :key="work.id"
                     class="relative pl-10 before:absolute before:top-[6px] before:left-[-12px] before:h-6 before:w-6 before:border-1 before:border-emerald-800 before:bg-gray-900 before:rounded-full">
-                    <div class="flex flex-col gap-1 mb-15">
+                    <div class="flex flex-col gap-1 mb-10">
                         <h4 class="text-2xl font-semibold text-slate-300">{{ work.designation }}</h4>
-                        <div class="flex items-center gap-5 mb-2">
+                        <div class="flex flex-col gap-2 mb-2">
                             <a class="link text-emerald-400 text-lg after:bg-emerald-400" v-if="work.url" :href="work.url">
                                 {{ work.organization }}
                             </a>
@@ -95,11 +95,12 @@ const workExperience = [
                                 {{ work.period }}</h5>
                         </div>
                         <p class="mb-2" v-html="work.description"></p>
-                        <ul class="pl-4 list-disc mb-4 flex flex-col gap-2">
+                        <ul class="pl-10 list-disc mb-4 flex flex-col gap-2">
                             <li v-for="point of work.points">{{ point }}</li>
                         </ul>
-                        <ul class="flex gap-2">
-                            <li class="px-4 py-2 border-1 rounded-lg text-xs hover:bg-slate-600 cursor-pointer"
+                        <ul class="flex flex-wrap gap-2">
+                            <li class="px-4 py-2 
+                                border-1 rounded-lg text-xs hover:bg-slate-600 cursor-pointer"
                                 v-for="skill of work.skillSet">{{ skill }}</li>
                         </ul>
                     </div>

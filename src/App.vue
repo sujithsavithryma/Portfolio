@@ -4,8 +4,12 @@ import Main from './components/Main.vue'
 </script>
 
 <template>
- <div class="mx-auto min-h-screen max-w-screen-xl">
-    <div class="flex flex-row gap-24">
+ <div class="mx-auto min-h-screen max-w-[2000px]">
+    <div class="flex-col gap-0
+      lg:flex lg:flex-row lg:gap-10 
+      xl:flex xl:flex-row xl:gap-15 
+      2xl:flex 2xl:flex-row 2xl:gap-40 
+      lg:px-10 2xl:px-40 ">
       <Header />
       <Main />
     </div>
