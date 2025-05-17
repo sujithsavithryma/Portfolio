@@ -1,13 +1,12 @@
 <script setup>
-import { FaHouseUser } from "vue-icons-plus/fa";
-import { GrContact } from "vue-icons-plus/gr";
 import { BsPersonWorkspace } from "vue-icons-plus/bs";
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { AiOutlineUser, AiFillMessage, AiFillGithub, AiFillLinkedin } from "vue-icons-plus/ai";
 
 const activeLink = ref('');
-const activeIconClass = 'scale-120';
+const activeIconClass = 'scale-120 text-emerald-400';
 const hoverIconClass = 'group-hover:scale-120 group-hover:text-emerald-400';
-const activeTextClass = 'translate-x-2 group-hover:opacity-100';
+const activeTextClass = 'translate-x-2 group-hover:text-emerald-400 group-hover:opacity-100';
 const hoverTextClass = 'group-hover:translate-x-2 group-hover:text-emerald-400 group-hover:opacity-100';
 const activeTextColor = 'text-slate-100';
 const inactiveTextColor = 'text-slate-600';
@@ -47,7 +46,7 @@ onBeforeUnmount(() => {
             <ul class="w-max flex flex-col gap-10">
                 <li class="group" :class="[activeLink === '' ? activeTextColor : inactiveTextColor]">
                     <a href="#" class="flex items-center gap-1" @click="activeLink = ''">
-                        <FaHouseUser :class="[activeLink === '' ? activeIconClass : hoverIconClass]"
+                        <AiOutlineUser :class="[activeLink === '' ? activeIconClass : hoverIconClass]"
                             class="transition-all" />
                         <span :class="[activeLink === '' ? activeTextClass : hoverTextClass]" class="opacity-0 transition-all">About</span>
                     </a>
@@ -60,12 +59,26 @@ onBeforeUnmount(() => {
                 </li>
                 <li  class="group" :class="[activeLink === 'contact' ? activeTextColor : inactiveTextColor]">
                     <a href="#contact" class="flex items-center gap-1" @click="activeLink = 'contact'">
-                        <GrContact :class="[activeLink === 'contact' ? activeIconClass : hoverIconClass]" class="transition-all" />
+                        <AiFillMessage :class="[activeLink === 'contact' ? activeIconClass : hoverIconClass]" class="transition-all" />
                         <span :class="[activeLink === 'contact' ? activeTextClass : hoverTextClass]" class="opacity-0 transition-all">Contact Me</span>
                     </a>
                 </li>
             </ul>
         </nav>
+        <ul class="relative my-10 pt-10 flex flex-col gap-8 before:border-t-1 before:absolute before:w-10 before:top-0 before:left-[-10px]">
+            <li class="hover:text-emerald-400">
+                <a href="https://www.github.com/sujithsavithryma">
+                    <AiFillGithub />
+                </a>
+               
+            </li>
+
+            <li class="hover:text-emerald-400">
+                 <a href="https://www.linkedin.com/in/sujithma/">
+                    <AiFillLinkedin />
+                </a>
+            </li>
+        </ul>
     </header>
 
     <header class="header flex sticky top-0 w-full h-[56px] 

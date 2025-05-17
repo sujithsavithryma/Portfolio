@@ -82,7 +82,7 @@
 }
 
 .link {
-  @apply relative;
+  @apply relative cursor-pointer;
 }
 
 .link::after {
