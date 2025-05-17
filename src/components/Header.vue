@@ -7,8 +7,8 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 const activeLink = ref('');
 const activeIconClass = 'scale-120';
 const hoverIconClass = 'group-hover:scale-120 group-hover:text-emerald-400';
-const activeTextClass = 'translate-x-2';
-const hoverTextClass = 'group-hover:translate-x-2 group-hover:text-emerald-400';
+const activeTextClass = 'translate-x-2 group-hover:opacity-100';
+const hoverTextClass = 'group-hover:translate-x-2 group-hover:text-emerald-400 group-hover:opacity-100';
 const activeTextColor = 'text-slate-100';
 const inactiveTextColor = 'text-slate-600';
 
@@ -49,19 +49,19 @@ onBeforeUnmount(() => {
                     <a href="#" class="flex items-center gap-1" @click="activeLink = ''">
                         <FaHouseUser :class="[activeLink === '' ? activeIconClass : hoverIconClass]"
                             class="transition-all" />
-                        <span :class="[activeLink === '' ? activeTextClass : hoverTextClass]" class="transition-all">About</span>
+                        <span :class="[activeLink === '' ? activeTextClass : hoverTextClass]" class="opacity-0 transition-all">About</span>
                     </a>
                 </li>
                 <li class="group" :class="[activeLink === 'experience' ? activeTextColor : inactiveTextColor]">
                     <a href="#experience" class="flex items-center gap-1" @click="activeLink = 'experience'">
                         <BsPersonWorkspace :class="[activeLink === 'experience' ? activeIconClass : hoverIconClass]" class="transition-all" />
-                        <span :class="[activeLink === 'experience' ? activeTextClass : hoverTextClass]" class="transition-all">Experience</span>
+                        <span :class="[activeLink === 'experience' ? activeTextClass : hoverTextClass]" class="opacity-0 transition-all">Experience</span>
                     </a>
                 </li>
                 <li  class="group" :class="[activeLink === 'contact' ? activeTextColor : inactiveTextColor]">
                     <a href="#contact" class="flex items-center gap-1" @click="activeLink = 'contact'">
                         <GrContact :class="[activeLink === 'contact' ? activeIconClass : hoverIconClass]" class="transition-all" />
-                        <span :class="[activeLink === 'contact' ? activeTextClass : hoverTextClass]" class="transition-all">Contact Me</span>
+                        <span :class="[activeLink === 'contact' ? activeTextClass : hoverTextClass]" class="opacity-0 transition-all">Contact Me</span>
                     </a>
                 </li>
             </ul>

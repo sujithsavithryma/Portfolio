@@ -10,7 +10,7 @@ import Main from './components/Main.vue'
       2xl:flex 2xl:flex-row 2xl:gap-40 
       lg:px-10 2xl:px-40  -->
  <div class="mx-auto min-h-screen max-w-[2000px]">
-    <div class="lg:px-10 2xl:px-40 grid lg:grid-cols-[220px_1fr] 2xl:grid-cols-[300px_1fr]">
+    <div class="lg:px-15 2xl:px-40 grid lg:grid-cols-[130px_1fr] 2xl:grid-cols-[300px_1fr]">
       <Header />
       <Main />
     </div>
