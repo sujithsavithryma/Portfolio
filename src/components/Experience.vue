@@ -37,7 +37,7 @@ const workExperience = [
         organization: 'Expian Technologies Pvt Ltd (The Scalers)',
         url: 'https://thescalers.com/',
         period: 'Oct 2018 - Feb 2020',
-        description: 'Developed a major client application (Vault) and contributed to other two major client applications (Analytics, Comply) for <a class="text-cyan-400" href="https://taxbackinternational.com/" > Taxback International <a/>, an Irish-based organization specializing in VAT compliance, reclamation, and consultancy.',
+        description: 'Developed a major client application (Vault) and contributed to other two major client applications (Analytics, Comply) for <a class="link text-cyan-400 after:bg-cyan-400" href="https://taxbackinternational.com/" > Taxback International <a/>, an Irish-based organization specializing in VAT compliance, reclamation, and consultancy.',
         points: [
             "Contributes to building a reusable theme library using Angular.",
         ],
@@ -86,7 +86,7 @@ const workExperience = [
                     <div class="flex flex-col gap-1 mb-15">
                         <h4 class="text-2xl font-semibold text-slate-300">{{ work.designation }}</h4>
                         <div class="flex items-center gap-5 mb-2">
-                            <a class="text-emerald-400 text-lg" v-if="work.url" :href="work.url">
+                            <a class="link text-emerald-400 text-lg after:bg-emerald-400" v-if="work.url" :href="work.url">
                                 {{ work.organization }}
                             </a>
                             <a class="text-emerald-400 text-lg" v-else> {{ work.organization }}</a>

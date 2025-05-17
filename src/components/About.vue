@@ -31,8 +31,10 @@ for (let i = 1; i < 6; i++) {
                     <div v-if="item === 5">
                         <ul class="ml-5 list-disc text-xl">
                             <li class="pb-2"><b class="text-emerald-400">10 years</b> of experience in front-end technologies</li>
-                            <li class="pb-2">Expert in <a href="https://angular.dev/" class="text-emerald-400">Angular</a>; Built a ton of applications</li>
-                            <li class="pb-2">Gaining hands-on experience with <a href="https://vuejs.org/" class="text-emerald-400">Vue.js</a>, <a href="https://react.dev/" class="text-cyan-500">React.js</a> and <a href="https://www.djangoproject.com/" class="text-green-600">Django</a></li>
+                            <li class="pb-2">Expert in <a href="https://angular.dev/" class="link text-emerald-400 after:bg-emerald-400">Angular</a>; Built a ton of applications</li>
+                            <li class="pb-2">Gaining hands-on experience with <a href="https://vuejs.org/" class="link text-emerald-400 after:bg-emerald-400">Vue.js</a>,
+                                <a href="https://react.dev/" class="link text-cyan-500 after:bg-cyan-500">React.js</a> and 
+                                <a href="https://www.djangoproject.com/" class="link text-green-600 after:bg-green-600">Django</a></li>
                         </ul>
                     </div>
                 </div>
