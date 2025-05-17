@@ -11,7 +11,7 @@ watchEffect(() => {
 </script>
 
 <template>
-    <section v-if="showTitle" id="contact" class="section py-10 max-w-[700px] flex flex-col items-center 
+    <section v-if="showTitle" id="contact" class="section py-10 w-full flex flex-col items-center 
          lg:my-100">
         <h3 class="text-6xl text-emerald-400 mb-10 ">Get In Touch</h3>
         <div class="flex flex-col mb-10 text-center">

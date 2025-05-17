@@ -7,12 +7,12 @@ import {ref } from 'vue'
 const aboutLoaded = ref(false)
 
 function loaded() {
-    console.log('loaded')
     aboutLoaded.value = true;
 }
 </script>
 <template>
-    <main class="flex flex-col sm:items-center ">
+    <!-- flex flex-col sm:items-center  -->
+    <main class="grid lg:min-w-full">
         <About @loaded="loaded" />
         <Experience :aboutLoaded="aboutLoaded" />
         <Contact :aboutLoaded="aboutLoaded"/>

@@ -93,8 +93,8 @@ watchEffect(() => {
 
 </script>
 <template>
-    <section v-if="showTitle" id="experience" class="section py-20">
-        <h3 class="text-3xl text-emerald-400 mb-10 text-center">Work Experience</h3>
+    <section id="experience" class="section py-20">
+        <h3 v-if="showTitle" class="text-3xl text-emerald-400 mb-20 text-center">Work Experience</h3>
         <div class="px-10" v-if="workExperience.length">
             <ul
                 class="relative before:absolute before:top-[10px] before:left-[0] before:border-l-1  before:border-emerald-800 before:h-full ">
@@ -103,7 +103,7 @@ watchEffect(() => {
                         class="relative pl-10 before:absolute before:top-[6px] before:left-[-12px] before:h-6 before:w-6 before:border-1 before:border-emerald-800 before:bg-gray-900 before:rounded-full">
                         <div v-if="work" class="flex flex-col gap-1 mb-10">
                             <h4 class="text-2xl font-semibold text-slate-300">{{ work.designation }}</h4>
-                            <div class="flex flex-col gap-2 mb-2">
+                            <div class="flex flex-col items-start gap-2 mb-2">
                                 <a class="link text-emerald-400 text-lg after:bg-emerald-400" v-if="work.url"
                                     :href="work.url">
                                     {{ work.organization }}

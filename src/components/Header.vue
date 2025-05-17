@@ -12,6 +12,7 @@ const hoverTextClass = 'group-hover:translate-x-2 group-hover:text-emerald-400';
 const activeTextColor = 'text-slate-100';
 const inactiveTextColor = 'text-slate-600';
 
+
 function updateActiveSection() {
     const sections = document.querySelectorAll('.section');
     const scrollPosition = window.scrollY + window.innerHeight / 2;
@@ -72,11 +73,11 @@ onBeforeUnmount(() => {
         lg:hidden xl:hidden 2xl:hidden">
         <nav>
             <ul class="w-max flex gap-10">
-                <li class="group" :class="[activeLink === 'about' ? activeTextColor : inactiveTextColor]">
-                    <a href="#about" class="flex items-center gap-1" @click="activeLink = 'about'">
-                        <FaHouseUser :class="[activeLink === 'about' ? activeIconClass : hoverIconClass]"
+                <li class="group" :class="[activeLink === '' ? activeTextColor : inactiveTextColor]">
+                    <a href="#" class="flex items-center gap-1" @click="activeLink = ''">
+                        <FaHouseUser :class="[activeLink === '' ? activeIconClass : hoverIconClass]"
                             class="transition-all hidden" />
-                        <span :class="[activeLink === 'about' ? activeTextClass : hoverTextClass]" class="transition-all">About</span>
+                        <span :class="[activeLink === '' ? activeTextClass : hoverTextClass]" class="transition-all">About</span>
                     </a>
                 </li>
                 <li class="group" :class="[activeLink === 'experience' ? activeTextColor : inactiveTextColor]">
