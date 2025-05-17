@@ -1,5 +1,5 @@
 <script setup>
-import { ref, TransitionGroup, Transition, defineEmits } from 'vue'
+import { ref, TransitionGroup, Transition } from 'vue'
 import Appear from './Appear.vue'
 
 const showImage = ref(false);

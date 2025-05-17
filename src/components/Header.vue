@@ -88,45 +88,51 @@ onBeforeUnmount(() => {
     </header>
 
     <header class="flex sticky top-0 w-full h-[56px] 
-        items-center justify-center z-100  bg-gray-900 shadow-2xl
+        items-center z-100 px-5 bg-gray-900 shadow-2xl
         lg:hidden xl:hidden 2xl:hidden">
-        <nav class="flex gap-10">
-            <ul class="w-max flex gap-10">
-                <li class="group" :class="[activeLink === '' ? activeTextColor : inactiveTextColor]">
-                    <a href="#" class="flex items-center gap-1" @click="activeLink = ''">
-                        <span :class="[activeLink === '' ? 'text-emerald-400' : 'hover:text-emerald-400']"
-                            class="transition-all opacity-100">About</span>
-                    </a>
-                </li>
-                <li class="group" :class="[activeLink === 'experience' ? activeTextColor : inactiveTextColor]">
-                    <a href="#experience" class="flex items-center gap-1" @click="activeLink = 'experience'">
-                        <span :class="[activeLink === 'experience' ? 'text-emerald-400' : 'hover:text-emerald-400']"
-                            class="transition-all opacity-100">Experience</span>
-                    </a>
-                </li>
-                <li class="group" :class="[activeLink === 'contact' ? activeTextColor : inactiveTextColor]">
-                    <a href="#contact" class="flex items-center gap-1" @click="activeLink = 'contact'">
-                        <span :class="[activeLink === 'contact' ? 'text-emerald-400' : 'hover:text-emerald-400']"
-                            class="transition-all opacity-100">Contact Me</span>
-                    </a>
-                </li>
-            </ul>
-            <ul
-                class="relative flex flex-row gap-2">
-                <li class="hover:text-emerald-400">
-                    <a href="https://www.github.com/sujithsavithryma" target="_blank">
-                        <AiFillGithub />
-                    </a>
+        <a href="">
+            <img class="h-10" src="../assets/logo.svg" alt="Logo">
+        </a>
 
-                </li>
+        <div class="flex w-full justify-center ">
+            <nav class="flex gap-10">
+                <ul class="w-max flex gap-10">
+                    <li class="group" :class="[activeLink === '' ? activeTextColor : inactiveTextColor]">
+                        <a href="#" class="flex items-center gap-1" @click="activeLink = ''">
+                            <span :class="[activeLink === '' ? 'text-emerald-400' : 'hover:text-emerald-400']"
+                                class="transition-all opacity-100">About</span>
+                        </a>
+                    </li>
+                    <li class="group" :class="[activeLink === 'experience' ? activeTextColor : inactiveTextColor]">
+                        <a href="#experience" class="flex items-center gap-1" @click="activeLink = 'experience'">
+                            <span :class="[activeLink === 'experience' ? 'text-emerald-400' : 'hover:text-emerald-400']"
+                                class="transition-all opacity-100">Experience</span>
+                        </a>
+                    </li>
+                    <li class="group" :class="[activeLink === 'contact' ? activeTextColor : inactiveTextColor]">
+                        <a href="#contact" class="flex items-center gap-1" @click="activeLink = 'contact'">
+                            <span :class="[activeLink === 'contact' ? 'text-emerald-400' : 'hover:text-emerald-400']"
+                                class="transition-all opacity-100">Contact Me</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="relative flex flex-row gap-2">
+                    <li class="hover:text-emerald-400">
+                        <a href="https://www.github.com/sujithsavithryma" target="_blank">
+                            <AiFillGithub />
+                        </a>
 
-                <li class="hover:text-emerald-400">
-                    <a href="https://www.linkedin.com/in/sujithma/" target="_blank">
-                        <AiFillLinkedin />
-                    </a>
-                </li>
-            </ul>
-        </nav>
+                    </li>
+
+                    <li class="hover:text-emerald-400">
+                        <a href="https://www.linkedin.com/in/sujithma/" target="_blank">
+                            <AiFillLinkedin />
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
 
 </template>
