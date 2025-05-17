@@ -76,7 +76,7 @@ const workExperience = [
 </script>
 <template>
     <section id="experience" class="min-h-screen py-10">
-        <h3 class="text-3xl text-emerald-400 mb-10">Work Experience</h3>
+        <h3 class="text-3xl text-emerald-400 mb-10 text-center">Work Experience</h3>
         <div class="px-2">
             <ul
                 class="relative before:absolute before:top-[10px] before:left-[0] before:border-l-1  before:border-emerald-800 before:h-full ">
