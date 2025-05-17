@@ -90,19 +90,22 @@ onBeforeUnmount(() => {
                     <a href="#" class="flex items-center gap-1" @click="activeLink = ''">
                         <AiOutlineUser :class="[activeLink === '' ? activeIconClass : hoverIconClass]"
                             class="transition-all hidden" />
-                        <span :class="[activeLink === '' ? activeTextClass : hoverTextClass]" class="transition-all">About</span>
+                        <span 
+                        class="transition-all opacity-100">About</span>
                     </a>
                 </li>
                 <li class="group" :class="[activeLink === 'experience' ? activeTextColor : inactiveTextColor]">
                     <a href="#experience" class="flex items-center gap-1" @click="activeLink = 'experience'">
                         <BsPersonWorkspace :class="[activeLink === 'experience' ? activeIconClass : hoverIconClass]" class="transition-all hidden" />
-                        <span :class="[activeLink === 'experience' ? activeTextClass : hoverTextClass]" class="transition-all">Experience</span>
+                        <span  
+                        class="transition-all opacity-100">Experience</span>
                     </a>
                 </li>
                 <li  class="group" :class="[activeLink === 'contact' ? activeTextColor : inactiveTextColor]">
                     <a href="#contact" class="flex items-center gap-1" @click="activeLink = 'contact'">
                         <AiFillMessage :class="[activeLink === 'contact' ? activeIconClass : hoverIconClass]" class="transition-all hidden" />
-                        <span :class="[activeLink === 'contact' ? activeTextClass : hoverTextClass]" class="transition-all">Contact Me</span>
+                        <span 
+                        class="transition-all opacity-100">Contact Me</span>
                     </a>
                 </li>
             </ul>

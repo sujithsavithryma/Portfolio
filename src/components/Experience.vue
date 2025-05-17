@@ -98,7 +98,7 @@ watchEffect(() => {
     <section id="experience" class="section pt-10">
         <div class="flex gap-10 items-center justify-start mb-20">
             <h3 v-if="showTitle" class="text-3xl text-slate-400   text-center">Work Experience</h3>
-            <div class="mt-[10px]">
+            <div v-if="showTitle" class="mt-[10px]">
                 <button class="py-1 px-4 border-1 border-emerald-500 rounded-lg 
                     text-emerald-400 relative cursor-pointer
                     transition-all gradient-before">
