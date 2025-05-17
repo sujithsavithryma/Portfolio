@@ -33,6 +33,29 @@
   transform: translateX(0);
   opacity: 1;
 }
+
+.awesome-border {
+  @apply relative;
+  overflow: hidden;
+}
+
+.awesome-border::before {
+  @apply absolute top-[-25%] left-[-25%] w-[150%] h-[150%] content-[''];
+  z-index: -2;
+  background-image: conic-gradient(
+    from 90deg,
+    var(--color-gray-900) 80%,
+    var(--color-emerald-500) 90%,
+    var(--color-gray-900) 100%
+  );
+  opacity: 1;
+}
+
+.awesome-border:hover::before {
+  opacity: 1;
+  animation: rotate 4s infinite linear;
+}
+
 .gradient-before {
   overflow: hidden;
 }

@@ -23,7 +23,7 @@ for (let i = 1; i < 6; i++) {
                 <div class="fade-in-items" v-for="item in arr" :key="item">
                     <h4 v-if="item === 1" class="text-emerald-400 text-xl">Hi, my name is</h4>
                     <h1 v-if="item === 2" class="text-8xl font-bold text-slate-300 mb-5">Sujith</h1>
-                    <h2 v-if="item === 3" class="text-2xl font-normal text-slate-300 mb-10">Front-end Engineer</h2>
+                    <!-- <h2 v-if="item === 3" class="text-2xl font-normal text-slate-300 mb-10">Front-end Engineer</h2> -->
                     <p v-if="item === 4" class="text-2xl mb-10">I am a passionate engineer who loves to build solid and
                         scalable front-end products.
                         Currently I am Tech Lead at Expian Technologies Bengaluru
@@ -44,8 +44,8 @@ for (let i = 1; i < 6; i++) {
         <div class="w-[400px]">
             <Transition name="slideIn">
                 <div v-if="showImage"
-                    class="w-[400px] -skew-y-2 hover:-skew-y-0 transition-all rounded-[1vw] shadow-xl/30 shadow-emerald-400">
-                    <img class="rounded-[1vw]" src="../assets/Sujith.jpg" alt="Image of Sujith">
+                    class="flex items-center  justify-center w-[400px] h-[340px] awesome-border rounded-[1vw] shadow-xl/30 shadow-emerald-400">
+                    <img class="rounded-[1vw] w-[98%]" src="../assets/Sujith.jpg" alt="Image of Sujith">
                 </div>
             </Transition>
         </div>
