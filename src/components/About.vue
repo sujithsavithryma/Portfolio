@@ -61,7 +61,7 @@ for (let i = 1; i < 6; i++) {
                 </TransitionGroup>
 
             </div>
-            <div class="flex justify-center about-content">
+            <div class="flex justify-center about-content md:!mt-[50px] sm:!mt-[50px]">
                 <div class="w-[300px] h-[255px] lg:w-[400px] lg:h-[340px]">
                     <Transition name="slideIn">
                         <div v-if="showImage"

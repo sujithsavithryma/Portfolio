@@ -29,7 +29,7 @@ onMounted(() => {
     window.addEventListener('scroll', updateActiveSection);
     const hashs = window.location.hash.split('#');
     if (hashs.length > 1) {
-      window.location = ''
+        window.location = ''
     }
     updateActiveSection();
 })
@@ -48,64 +48,81 @@ onBeforeUnmount(() => {
                     <a href="#" class="flex items-center gap-1" @click="activeLink = ''">
                         <AiOutlineUser :class="[activeLink === '' ? activeIconClass : hoverIconClass]"
                             class="transition-all" />
-                        <span :class="[activeLink === '' ? activeTextClass : hoverTextClass]" class="opacity-0 transition-all">About</span>
+                        <span :class="[activeLink === '' ? activeTextClass : hoverTextClass]"
+                            class="opacity-0 transition-all">About</span>
                     </a>
                 </li>
                 <li class="group" :class="[activeLink === 'experience' ? activeTextColor : inactiveTextColor]">
                     <a href="#experience" class="flex items-center gap-1" @click="activeLink = 'experience'">
-                        <BsPersonWorkspace :class="[activeLink === 'experience' ? activeIconClass : hoverIconClass]" class="transition-all" />
-                        <span :class="[activeLink === 'experience' ? activeTextClass : hoverTextClass]" class="opacity-0 transition-all">Experience</span>
+                        <BsPersonWorkspace :class="[activeLink === 'experience' ? activeIconClass : hoverIconClass]"
+                            class="transition-all" />
+                        <span :class="[activeLink === 'experience' ? activeTextClass : hoverTextClass]"
+                            class="opacity-0 transition-all">Experience</span>
                     </a>
                 </li>
-                <li  class="group" :class="[activeLink === 'contact' ? activeTextColor : inactiveTextColor]">
+                <li class="group" :class="[activeLink === 'contact' ? activeTextColor : inactiveTextColor]">
                     <a href="#contact" class="flex items-center gap-1" @click="activeLink = 'contact'">
-                        <AiFillMessage :class="[activeLink === 'contact' ? activeIconClass : hoverIconClass]" class="transition-all" />
-                        <span :class="[activeLink === 'contact' ? activeTextClass : hoverTextClass]" class="opacity-0 transition-all">Contact Me</span>
+                        <AiFillMessage :class="[activeLink === 'contact' ? activeIconClass : hoverIconClass]"
+                            class="transition-all" />
+                        <span :class="[activeLink === 'contact' ? activeTextClass : hoverTextClass]"
+                            class="opacity-0 transition-all">Contact Me</span>
                     </a>
                 </li>
             </ul>
         </nav>
-        <ul class="relative my-10 pt-10 flex flex-col gap-8 before:border-t-1 before:absolute before:w-10 before:top-0 before:left-[-10px]">
+        <ul
+            class="relative my-10 pt-10 flex flex-col gap-8 before:border-t-1 before:absolute before:w-10 before:top-0 before:left-[-10px]">
             <li class="hover:text-emerald-400">
                 <a href="https://www.github.com/sujithsavithryma" target="_blank">
                     <AiFillGithub />
                 </a>
-               
+
             </li>
 
             <li class="hover:text-emerald-400">
-                 <a href="https://www.linkedin.com/in/sujithma/" target="_blank">
+                <a href="https://www.linkedin.com/in/sujithma/" target="_blank">
                     <AiFillLinkedin />
                 </a>
             </li>
         </ul>
     </header>
 
-    <header class="header flex sticky top-0 w-full h-[56px] 
+    <header class="flex sticky top-0 w-full h-[56px] 
         items-center justify-center z-100  bg-gray-900 shadow-2xl
         lg:hidden xl:hidden 2xl:hidden">
-        <nav>
+        <nav class="flex gap-10">
             <ul class="w-max flex gap-10">
                 <li class="group" :class="[activeLink === '' ? activeTextColor : inactiveTextColor]">
                     <a href="#" class="flex items-center gap-1" @click="activeLink = ''">
-                        <AiOutlineUser :class="[activeLink === '' ? activeIconClass : hoverIconClass]"
-                            class="transition-all hidden" />
-                        <span 
-                        class="transition-all opacity-100">About</span>
+                        <span :class="[activeLink === '' ? 'text-emerald-400' : 'hover:text-emerald-400']"
+                            class="transition-all opacity-100">About</span>
                     </a>
                 </li>
                 <li class="group" :class="[activeLink === 'experience' ? activeTextColor : inactiveTextColor]">
                     <a href="#experience" class="flex items-center gap-1" @click="activeLink = 'experience'">
-                        <BsPersonWorkspace :class="[activeLink === 'experience' ? activeIconClass : hoverIconClass]" class="transition-all hidden" />
-                        <span  
-                        class="transition-all opacity-100">Experience</span>
+                        <span :class="[activeLink === 'experience' ? 'text-emerald-400' : 'hover:text-emerald-400']"
+                            class="transition-all opacity-100">Experience</span>
                     </a>
                 </li>
-                <li  class="group" :class="[activeLink === 'contact' ? activeTextColor : inactiveTextColor]">
+                <li class="group" :class="[activeLink === 'contact' ? activeTextColor : inactiveTextColor]">
                     <a href="#contact" class="flex items-center gap-1" @click="activeLink = 'contact'">
-                        <AiFillMessage :class="[activeLink === 'contact' ? activeIconClass : hoverIconClass]" class="transition-all hidden" />
-                        <span 
-                        class="transition-all opacity-100">Contact Me</span>
+                        <span :class="[activeLink === 'contact' ? 'text-emerald-400' : 'hover:text-emerald-400']"
+                            class="transition-all opacity-100">Contact Me</span>
+                    </a>
+                </li>
+            </ul>
+            <ul
+                class="relative flex flex-row gap-2">
+                <li class="hover:text-emerald-400">
+                    <a href="https://www.github.com/sujithsavithryma" target="_blank">
+                        <AiFillGithub />
+                    </a>
+
+                </li>
+
+                <li class="hover:text-emerald-400">
+                    <a href="https://www.linkedin.com/in/sujithma/" target="_blank">
+                        <AiFillLinkedin />
                     </a>
                 </li>
             </ul>
