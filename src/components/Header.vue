@@ -6,15 +6,15 @@ import { ref } from 'vue'
 
 const activeLink = ref('about');
 const activeIconClass = 'scale-120';
-const hoverIconClass = 'group-hover:scale-120';
+const hoverIconClass = 'group-hover:scale-120 group-hover:text-emerald-400';
 const activeTextClass = 'translate-x-2';
-const hoverTextClass = 'group-hover:translate-x-2';
+const hoverTextClass = 'group-hover:translate-x-2 group-hover:text-emerald-400';
 const activeTextColor = 'text-slate-100';
 const inactiveTextColor = 'text-slate-600';
 
 </script>
 <template>
-    <header class="sticky top-0 flex flex-col w-[200px] h-full pt-[30%] px-12">
+    <header class="sticky top-0 flex flex-col w-[200px] h-full pt-[30%]">
         <nav>
             <ul class="w-max flex flex-col gap-10">
                 <li class="group" :class="[activeLink === 'about' ? activeTextColor : inactiveTextColor]">
