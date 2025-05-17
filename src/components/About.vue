@@ -26,9 +26,10 @@ for (let i = 1; i < 6; i++) {
 
                 <TransitionGroup name="fade" tag="div">
                     <div class="fade-in-items" v-for="item in arr" :key="item">
-                        <h4 v-if="item === 1" class="text-emerald-400 text-xl text-center lg:text-left tracking-widest">Hi, my name is
+                        <h4 v-if="item === 1" class="text-emerald-600 text-xl text-center lg:text-left tracking-widest">
+                            Hi, my name is
                         </h4>
-                        <h1 v-if="item === 2" class="text-8xl font-bold text-slate-300 mb-10 text-center lg:text-left">
+                        <h1 v-if="item === 2" class="text-8xl font-bold text-slate-400 mb-10 text-center lg:text-left">
                             Sujith
                         </h1>
                         <!-- <h2 v-if="item === 3" class="text-2xl font-normal text-slate-300 mb-10">Front-end Engineer</h2> -->
@@ -42,19 +43,20 @@ for (let i = 1; i < 6; i++) {
                             <ul class="ml-5 list-disc text-xl ">
                                 <li class="pb-2"><b class="text-emerald-400">10 years</b> of experience in front-end
                                     technologies</li>
-                                <li class="pb-2">Expert in <a href="https://angular.dev/"
+                                <li class="pb-2">Expert in <a target="_blank" href="https://angular.dev/"
                                         class="link text-emerald-400 after:bg-emerald-400">Angular</a>; Built a ton of
                                     applications</li>
-                                <li class="pb-2">Gaining hands-on experience with <a href="https://vuejs.org/"
+                                <li class="pb-2">Gaining hands-on experience with <a target="_blank" href="https://vuejs.org/"
                                         class="link text-emerald-400 after:bg-emerald-400">Vue.js</a>,
-                                    <a href="https://react.dev/"
+                                    <a href="https://react.dev/" target="_blank"
                                         class="link text-cyan-500 after:bg-cyan-500">React.js</a>
                                     and
-                                    <a href="https://www.djangoproject.com/"
+                                    <a href="https://www.djangoproject.com/" target="_blank"
                                         class="link text-green-600 after:bg-green-600">Django</a>
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </TransitionGroup>
 
@@ -68,6 +70,7 @@ for (let i = 1; i < 6; i++) {
                         </div>
                     </Transition>
                 </div>
+    
             </div>
         </div>
 

@@ -67,14 +67,14 @@ onBeforeUnmount(() => {
         </nav>
         <ul class="relative my-10 pt-10 flex flex-col gap-8 before:border-t-1 before:absolute before:w-10 before:top-0 before:left-[-10px]">
             <li class="hover:text-emerald-400">
-                <a href="https://www.github.com/sujithsavithryma">
+                <a href="https://www.github.com/sujithsavithryma" target="_blank">
                     <AiFillGithub />
                 </a>
                
             </li>
 
             <li class="hover:text-emerald-400">
-                 <a href="https://www.linkedin.com/in/sujithma/">
+                 <a href="https://www.linkedin.com/in/sujithma/" target="_blank">
                     <AiFillLinkedin />
                 </a>
             </li>
@@ -88,7 +88,7 @@ onBeforeUnmount(() => {
             <ul class="w-max flex gap-10">
                 <li class="group" :class="[activeLink === '' ? activeTextColor : inactiveTextColor]">
                     <a href="#" class="flex items-center gap-1" @click="activeLink = ''">
-                        <FaHouseUser :class="[activeLink === '' ? activeIconClass : hoverIconClass]"
+                        <AiOutlineUser :class="[activeLink === '' ? activeIconClass : hoverIconClass]"
                             class="transition-all hidden" />
                         <span :class="[activeLink === '' ? activeTextClass : hoverTextClass]" class="transition-all">About</span>
                     </a>
@@ -101,7 +101,7 @@ onBeforeUnmount(() => {
                 </li>
                 <li  class="group" :class="[activeLink === 'contact' ? activeTextColor : inactiveTextColor]">
                     <a href="#contact" class="flex items-center gap-1" @click="activeLink = 'contact'">
-                        <GrContact :class="[activeLink === 'contact' ? activeIconClass : hoverIconClass]" class="transition-all hidden" />
+                        <AiFillMessage :class="[activeLink === 'contact' ? activeIconClass : hoverIconClass]" class="transition-all hidden" />
                         <span :class="[activeLink === 'contact' ? activeTextClass : hoverTextClass]" class="transition-all">Contact Me</span>
                     </a>
                 </li>
