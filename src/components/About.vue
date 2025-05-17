@@ -20,11 +20,9 @@ for (let i = 1; i < 6; i++) {
 
 </script>
 <template>
-    <!-- flex flex-col
-        py-10 px-10 items-center gap-8 lg:items-start lg:py-60 lg:flex-row lg:h-screen -->
-    <section class="section py-10 px-10 lg:px-0 gap-8 lg:py-60 lg:h-screen lg:w-full">
+    <section class="section py-10 px-10 lg:px-0 gap-8 lg:h-screen lg:w-full">
         <div class="h-full grid grid-cols-[1fr, 1fr] lg:grid-cols-[1fr_400px] lg:min-w-46 gap-5">
-            <div class="flex justify-center lg:justify-start">
+            <div class="flex justify-center lg:justify-start about-content">
 
                 <TransitionGroup name="fade" tag="div">
                     <div class="fade-in-items" v-for="item in arr" :key="item">
@@ -33,7 +31,7 @@ for (let i = 1; i < 6; i++) {
                         <h1 v-if="item === 2" class="text-8xl font-bold text-slate-300 mb-10 text-center lg:text-left">
                             Sujith
                         </h1>
-                        <!-- <h2 v-if="item === 3" class="text-2xl font-normal text-slate-300 mb-10">Front-end Engineer</h2> -->
+                        <h2 v-if="item === 3" class="text-2xl font-normal text-slate-300 mb-10">Front-end Engineer</h2>
                         <p v-if="item === 4" class="text-2xl mb-10 text-center lg:text-left">I am a passionate engineer
                             who
                             loves to build solid and
@@ -61,7 +59,7 @@ for (let i = 1; i < 6; i++) {
                 </TransitionGroup>
 
             </div>
-            <div class="flex justify-center">
+            <div class="flex justify-center about-content">
                 <div class="w-[300px] h-[255px] lg:w-[400px] lg:h-[340px]">
                     <Transition name="slideIn">
                         <div v-if="showImage"

@@ -100,20 +100,12 @@
   }
 }
 
-/* @media (max-width:1200px) {
-  .about-container {
-    flex-direction: column;
-  }
-  .hero-container {
-    width: 100%;
+
+@media (min-height:1000px) {
+  .about-content {
+    margin-top: 100px;
   }
   .header {
-    padding-left: 2rem;
+    transform: translateY(-7rem);
   }
 }
-
-@media (min-width:1300px) {
-  .hero-container {
-    width: 600px;
-  }
-} */
