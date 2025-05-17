@@ -21,7 +21,7 @@ for (let i = 1; i < 6; i++) {
 
             <TransitionGroup name="fade" tag="div">
                 <div class="fade-in-items" v-for="item in arr" :key="item">
-                    <h4 v-if="item === 1" class="text-emerald-300 text-xl">Hi, my name is</h4>
+                    <h4 v-if="item === 1" class="text-emerald-400 text-xl">Hi, my name is</h4>
                     <h1 v-if="item === 2" class="text-8xl font-bold text-slate-300 mb-5">Sujith</h1>
                     <h2 v-if="item === 3" class="text-2xl font-normal text-slate-300 mb-10">Front-end Engineer</h2>
                     <p v-if="item === 4" class="text-2xl mb-10">I am a passionate engineer who loves to build solid and
