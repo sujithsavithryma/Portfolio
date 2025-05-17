@@ -42,7 +42,7 @@ onBeforeUnmount(() => {
 </script>
 <template>
     <header class="header hidden sticky top-0 lg:flex xl:flex 2xl:flex
-    lg:flex-col xl:flex-col 2xl:flex-col w-[200px] h-screen justify-center">
+    lg:flex-col xl:flex-col 2xl:flex-col w-[140px] h-screen justify-center">
         <nav>
             <ul class="w-max flex flex-col gap-10">
                 <li class="group" :class="[activeLink === '' ? activeTextColor : inactiveTextColor]">

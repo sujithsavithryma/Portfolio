@@ -84,7 +84,9 @@ watchEffect(() => {
 
         for (let i = 0; i <= items.length; i++) {
             setTimeout(() => {
-                workExperience.value.push(items[i]);
+                if (i < items.length) {
+                    workExperience.value.push(items[i]);
+                }
             }, i * 10)
         }
     }
@@ -93,9 +95,9 @@ watchEffect(() => {
 
 </script>
 <template>
-    <section id="experience" class="section py-20">
+    <section id="experience" class="section pt-10">
         <h3 v-if="showTitle" class="text-3xl text-emerald-400 mb-20 text-center">Work Experience</h3>
-        <div class="px-10" v-if="workExperience.length">
+        <div class="px-10 lg:px-0" v-if="workExperience.length">
             <ul
                 class="relative before:absolute before:top-[10px] before:left-[0] before:border-l-1  before:border-emerald-800 before:h-full ">
                 <TransitionGroup name="fade" tag="li">
