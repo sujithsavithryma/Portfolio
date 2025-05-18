@@ -97,8 +97,8 @@ watchEffect(() => {
 <template>
     <section id="experience" class="section pt-20 lg:pt-10 px-6">
         <div class="flex flex-col gap-2 items-center justify-center lg:justify-start mb-15 lg:flex-row lg:gap-10 lg:mb-10 ">
-            <h3 v-if="showTitle" class="text-3xl text-slate-600">Work Experience</h3>
-            <div v-if="showTitle" class="mt-[10px]">
+            <h3 v-if="showTitle" class="text-3xl text-[var(--title-color)]">Work Experience</h3>
+            <div v-if="showTitle" class="lg:mt-[10px]">
                 <button class="py-1 px-4 border-1 border-[var(--primary)] rounded-lg 
                     text-[var(--primary)] relative cursor-pointer
                     transition-all gradient-before">
@@ -115,9 +115,9 @@ watchEffect(() => {
                 class="relative before:absolute before:top-[10px] before:left-[0] before:border-l-1  before:border-[var(--primary)] before:h-full ">
                 <TransitionGroup name="fade" tag="li">
                     <li v-for="work in workExperience" :key="work"
-                        class="relative pl-10 before:absolute before:top-[6px] before:left-[-12px] before:h-6 before:w-6 before:border-1 before:border-[var(--primary-dark)] before:bg-zinc-200 before:rounded-full">
+                        class="relative pl-10 before:absolute before:top-[6px] before:left-[-12px] before:h-6 before:w-6 before:border-1 before:border-[var(--primary-dark)] before:bg-[var(--bg-color)] before:rounded-full">
                         <div v-if="work" class="flex flex-col gap-1 mb-10">
-                            <h4 class="text-2xl font-semibold text-slate-500">{{ work.designation }}</h4>
+                            <h4 class="text-2xl font-semibold text-[var(--sub-title-color)]">{{ work.designation }}</h4>
                             <div class="flex flex-col items-start gap-2 mb-2">
                                 <a class="link text-[var(--primary-dark)] text-lg after:bg-[var(--primary-dark)]" v-if="work.url"
                                     :href="work.url" target="_blank">

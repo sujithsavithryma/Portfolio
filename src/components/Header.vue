@@ -1,7 +1,7 @@
 <script setup>
 import { BsPersonWorkspace } from "vue-icons-plus/bs";
 import { ref, onMounted, onBeforeUnmount } from 'vue'
-import { AiOutlineUser, AiFillMessage, AiFillGithub, AiFillLinkedin, AiOutlineMenu, AiFillCloseCircle } from "vue-icons-plus/ai";
+import { AiFillSun, AiFillMoon, AiOutlineUser, AiFillMessage, AiFillGithub, AiFillLinkedin, AiOutlineMenu, AiFillCloseCircle } from "vue-icons-plus/ai";
 
 const activeLink = ref('');
 const activeIconClass = 'scale-120 text-[var(--primary)]';
@@ -12,6 +12,7 @@ const activeTextColor = 'text-slate-100';
 const inactiveTextColor = 'text-slate-600';
 
 const showMenu = ref(false);
+const darkMode = ref(true);
 
 function updateActiveSection() {
     const sections = document.querySelectorAll('.section');
@@ -27,8 +28,15 @@ function updateActiveSection() {
 }
 
 function toggleMenu() {
-    console.log('toggle menu')
     showMenu.value = !showMenu.value;
+}
+
+function toggleDarkMode() {
+    darkMode.value = !darkMode.value;
+    const elem = document.getElementsByTagName('body')[0];
+    if (elem) {
+        darkMode.value ? elem.classList.add('dark') : elem.classList.remove('dark');
+    }
 }
 
 onMounted(() => {
@@ -48,6 +56,18 @@ onBeforeUnmount(() => {
 <template>
     <header class="header hidden sticky top-0 lg:flex xl:flex 2xl:flex
     lg:flex-col xl:flex-col 2xl:flex-col w-[140px] h-screen justify-center">
+        <ul
+            class="relative my-10 pb-10 flex flex-col gap-8 before:border-b-1 before:absolute before:w-10 before:bottom-0 before:left-[-10px]">
+            <li>
+                <button class="hover:text-[var(--primary)] cursor-pointer" @click.prevent="toggleDarkMode"
+                    v-bind:title="darkMode ? 'Change to light theme' : 'Change to dark theme'">
+                    <AiFillSun v-if="darkMode" />
+                    <AiFillMoon v-else />
+                </button>
+            </li>
+
+        </ul>
+
         <nav>
             <ul class="w-max flex flex-col gap-10">
                 <li class="group" :class="[activeLink === '' ? activeTextColor : inactiveTextColor]">
@@ -78,15 +98,15 @@ onBeforeUnmount(() => {
         </nav>
         <ul
             class="relative my-10 pt-10 flex flex-col gap-8 before:border-t-1 before:absolute before:w-10 before:top-0 before:left-[-10px]">
-            <li class="hover:text-emerald-400">
-                <a href="https://www.github.com/sujithsavithryma" target="_blank">
+            <li class="hover:text-[var(--primary)]">
+                <a title="Go to github profile" href="https://www.github.com/sujithsavithryma" target="_blank">
                     <AiFillGithub />
                 </a>
 
             </li>
 
-            <li class="hover:text-emerald-400">
-                <a href="https://www.linkedin.com/in/sujithma/" target="_blank">
+            <li class="hover:text-[var(--primary)]">
+                <a title="Go to linkedIn profile" href="https://www.linkedin.com/in/sujithma/" target="_blank">
                     <AiFillLinkedin />
                 </a>
             </li>
@@ -96,14 +116,14 @@ onBeforeUnmount(() => {
     <header class="flex sticky top-0 w-full h-[56px] 
         items-center justify-between z-100 px-5 
         bg-zinc-800 shadow-2xl
-        lg:hidden xl:hidden 2xl:hidden">
+        lg:hidden xl:hidden 2xl:hidden dark:bg-[var(--bg-color)]">
 
         <!-- <button @click.prevent="toggleMenu()">
             <AiOutlineMenu  />
         </button>
          -->
 
-        <a href="" >
+        <a href="">
             <img class="h-10" src="../assets/logo.svg" alt="Logo">
         </a>
 
@@ -111,22 +131,29 @@ onBeforeUnmount(() => {
 
         <div>
             <ul class="relative text-slate-200 flex flex-row gap-3">
-                    <li class="hover:text-[var(--primary)]">
-                        <a href="https://www.github.com/sujithsavithryma" target="_blank">
-                            <AiFillGithub />
-                        </a>
+                <li>
+                    <button class="hover:text-[var(--primary)] cursor-pointer" @click.prevent="toggleDarkMode"
+                        v-bind:title="darkMode ? 'Change to light theme' : 'Change to dark theme'">
+                        <AiFillSun v-if="darkMode" />
+                        <AiFillMoon v-else />
+                    </button>
+                </li>
+                <li class="hover:text-[var(--primary)]">
+                    <a href="https://www.github.com/sujithsavithryma" target="_blank">
+                        <AiFillGithub />
+                    </a>
 
-                    </li>
+                </li>
 
-                    <li class="hover:text-[var(--primary)]">
-                        <a href="https://www.linkedin.com/in/sujithma/" target="_blank">
-                            <AiFillLinkedin />
-                        </a>
-                    </li>
-                </ul>
+                <li class="hover:text-[var(--primary)]">
+                    <a href="https://www.linkedin.com/in/sujithma/" target="_blank">
+                        <AiFillLinkedin />
+                    </a>
+                </li>
+            </ul>
         </div>
 
-        
+
 
     </header>
 

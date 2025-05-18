@@ -4,7 +4,11 @@
   --primary: var(--color-emerald-500);
   --primary-dark: var(--color-emerald-600);
   --primary-light: var(--color-emerald-400);
+  --bg-color: var(--color-zinc-2);
+  --title-color: var(--color-slate-600);
+  --sub-title-color: var(--color-slate-500);
 }
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   /* background: #280e5c;
@@ -12,7 +16,13 @@ body {
   @apply bg-zinc-200 text-slate-500;
 }
 body.dark {
-  @apply bg-linear-[at_76%_75%] from-gray-800 via-gray-900 to-cyan-900 to-90%;
+  @apply bg-gray-900 bg-linear-[at_76%_75%] from-gray-800 via-gray-900 to-cyan-900 to-90%;
+  --primary: var(--color-emerald-400);
+  --primary-dark: var(--color-emerald-500);
+  --primary-light: var(--color-emerald-300);
+  --bg-color: var(--color-gray-900);
+  --title-color: var(--color-slate-400);
+  --sub-title-color: var(--color-slate-500);
 }
 :root {
   --menu-shadow: -2px 1px 14px var(--color-gray-500);
@@ -62,9 +72,9 @@ body.dark {
   z-index: -2;
   background-image: conic-gradient(
     from 90deg,
-    var(--color-zinc-200) 80%,
+    var(--bg-color) 80%,
     var(--primary) 90%,
-    var(--color-zinc-200) 100%
+    var(--bg-color) 100%
   );
   opacity: 1;
 }
@@ -82,9 +92,9 @@ body.dark {
   z-index: -2;
   background-image: conic-gradient(
     from 90deg,
-    var(--color-zinc-200) 80%,
+    var(--bg-color) 80%,
     var(--primary) 90%,
-    var(--color-zinc-200) 100%
+    var(--bg-color) 100%
   );
   opacity: 0;
 }
@@ -96,7 +106,7 @@ body.dark {
 
 .gradient-before::after {
   z-index: -1;
-  @apply absolute content-[''] w-[97%] h-[94%] top-[2%] left-[2%] rounded-lg bg-zinc-200;
+  @apply absolute content-[''] w-[97%] h-[94%] top-[2%] left-[2%] rounded-lg bg-[var(--bg-color)];
 }
 
 .link {
