@@ -15,7 +15,7 @@ const items = [
         period: 'May 2023 - May 2025',
         description: 'After 3 years of consistent contribution, I was promoted to Tech Lead for the same client. In this role, I led the development of new applications and oversaw the maintenance and enhancement of existing systems.',
         points: [
-            "Designed and developed more than 10 web applications",
+            "Designed and developed more than 10 web applications.",
             "Significantly improved the theme library by refactoring code and enhancing overall code quality."
         ],
         skillSet: ['Angular', 'Angular Material', 'Ngx-Translate', 'NgRx', 'Typescript']
