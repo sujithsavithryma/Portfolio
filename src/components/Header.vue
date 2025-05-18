@@ -4,10 +4,10 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { AiOutlineUser, AiFillMessage, AiFillGithub, AiFillLinkedin, AiOutlineMenu, AiFillCloseCircle } from "vue-icons-plus/ai";
 
 const activeLink = ref('');
-const activeIconClass = 'scale-120 text-emerald-400';
-const hoverIconClass = 'group-hover:scale-120 group-hover:text-emerald-400';
-const activeTextClass = 'translate-x-2 group-hover:text-emerald-400 group-hover:opacity-100';
-const hoverTextClass = 'group-hover:translate-x-2 group-hover:text-emerald-400 group-hover:opacity-100';
+const activeIconClass = 'scale-120 text-[var(--primary)]';
+const hoverIconClass = 'group-hover:scale-120 group-hover:text-[var(--primary)]';
+const activeTextClass = 'translate-x-2 group-hover:text-[var(--primary)] group-hover:opacity-100';
+const hoverTextClass = 'group-hover:translate-x-2 group-hover:text-[var(--primary)] group-hover:opacity-100';
 const activeTextColor = 'text-slate-100';
 const inactiveTextColor = 'text-slate-600';
 
@@ -111,14 +111,14 @@ onBeforeUnmount(() => {
 
         <div>
             <ul class="relative text-slate-200 flex flex-row gap-3">
-                    <li class="hover:text-emerald-400">
+                    <li class="hover:text-[var(--primary)]">
                         <a href="https://www.github.com/sujithsavithryma" target="_blank">
                             <AiFillGithub />
                         </a>
 
                     </li>
 
-                    <li class="hover:text-emerald-400">
+                    <li class="hover:text-[var(--primary)]">
                         <a href="https://www.linkedin.com/in/sujithma/" target="_blank">
                             <AiFillLinkedin />
                         </a>

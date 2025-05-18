@@ -1,4 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --primary: var(--color-emerald-500);
+  --primary-dark: var(--color-emerald-600);
+  --primary-light: var(--color-emerald-400);
+}
+
 body {
   /* background: #280e5c;
   background: linear-gradient(339deg, rgb(44 20 89) 76%, rgb(41 11 85) 74%); */
@@ -55,9 +62,9 @@ body.dark {
   z-index: -2;
   background-image: conic-gradient(
     from 90deg,
-    var(--color-gray-900) 80%,
-    var(--color-emerald-500) 90%,
-    var(--color-gray-900) 100%
+    var(--color-zinc-200) 80%,
+    var(--primary) 90%,
+    var(--color-zinc-200) 100%
   );
   opacity: 1;
 }
@@ -75,9 +82,9 @@ body.dark {
   z-index: -2;
   background-image: conic-gradient(
     from 90deg,
-    var(--color-gray-900) 80%,
-    var(--color-emerald-500) 90%,
-    var(--color-gray-900) 100%
+    var(--color-zinc-200) 80%,
+    var(--primary) 90%,
+    var(--color-zinc-200) 100%
   );
   opacity: 0;
 }
@@ -89,7 +96,7 @@ body.dark {
 
 .gradient-before::after {
   z-index: -1;
-  @apply absolute content-[''] w-[97%] h-[94%] top-[2%] left-[2%] rounded-lg bg-gray-900;
+  @apply absolute content-[''] w-[97%] h-[94%] top-[2%] left-[2%] rounded-lg bg-zinc-200;
 }
 
 .link {
@@ -111,7 +118,7 @@ body.dark {
   }
 }
 
-@media (min-height:1000px) {
+@media (min-height: 1000px) {
   .about-content {
     margin-top: 100px;
   }
@@ -119,4 +126,3 @@ body.dark {
     transform: translateY(-7rem);
   }
 }
-

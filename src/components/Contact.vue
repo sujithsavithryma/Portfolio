@@ -21,8 +21,8 @@ watchEffect(() => {
                     after:bg-cyan-400" target="_blank" href="https://www.linkedin.com/in/sujithma/">LinkedIn</a> or email me directly.
             </p>
         </div>
-        <button class="py-4 px-10 border-1 border-emerald-500 rounded-lg 
-            text-emerald-400 relative cursor-pointer
+        <button class="py-4 px-10 border-1 border-[var(--primary)] rounded-lg 
+            text-[var(--primary)] relative cursor-pointer
             transition-all gradient-before">
             <a target="_blank" href="mailto:sujithma1992@gmail.com">Say Hello</a>
         </button>

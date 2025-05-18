@@ -1,6 +1,5 @@
 <script setup>
 import { ref, TransitionGroup, Transition } from 'vue'
-import Appear from './Appear.vue'
 
 const showImage = ref(false);
 const arr = ref([]);
@@ -20,13 +19,13 @@ for (let i = 1; i < 6; i++) {
 
 </script>
 <template>
-    <section class="section pt-20 px-6 lg:px-0 gap-8 lg:h-screen lg:w-full">
+    <section class="section pt-10 sm:pt-20 px-6 lg:px-0 gap-8 lg:w-full">
         <div class="h-full grid grid-cols-[1fr, 1fr] lg:grid-cols-[1fr_400px] lg:min-w-46 gap-5">
             <div class="flex justify-center lg:justify-start about-content">
 
                 <TransitionGroup name="fade" tag="div">
                     <div class="fade-in-items" v-for="item in arr" :key="item">
-                        <h4 v-if="item === 1" class="text-emerald-600 text-xl text-center lg:text-left tracking-widest">
+                        <h4 v-if="item === 1" class="text-[var(--primary)] text-xl text-center lg:text-left tracking-widest">
                             Hello, I am
                         </h4>
                         <h1 v-if="item === 2" class="text-8xl font-bold tracking-wide  text-slate-600 mb-10 text-center lg:text-left">
@@ -41,12 +40,12 @@ for (let i = 1; i < 6; i++) {
                         </p>
                         <div v-if="item === 5" class="flex justify-center lg:justify-start">
                             <ul class="ml-5 list-disc text-xl ">
-                                <li class="pb-2"><b class="text-emerald-500">10 years</b> of experience in front end
+                                <li class="pb-2"><b class="text-[var(--primary)]">10 years</b> of experience in front end
                                     technologies.</li>
                                 <li class="pb-2">Expert in <a target="_blank" href="https://angular.dev/"
-                                        class="link text-emerald-500 after:bg-emerald-500">Angular</a>; Built many applications.</li>
+                                        class="link text-[var(--primary)] after:bg-[var(--primary)]">Angular</a>; Built many applications.</li>
                                 <li class="pb-2">Gaining hands-on experience with <a target="_blank" href="https://vuejs.org/"
-                                        class="link text-emerald-500 after:bg-emerald-500">Vue.js</a>,
+                                        class="link text-[var(--primary)] after:bg-[var(--primary)]">Vue.js</a>,
                                     <a href="https://react.dev/" target="_blank"
                                         class="link text-cyan-500 after:bg-cyan-500">React.js</a>
                                     and

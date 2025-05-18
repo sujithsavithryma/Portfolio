@@ -42,7 +42,7 @@ const items = [
         organization: 'Expian Technologies Pvt Ltd (The Scalers)',
         url: 'https://thescalers.com/',
         period: 'Oct 2018 - Feb 2020',
-        description: 'Developed a major client application (Vault) and contributed to other two major client applications (Analytics, Comply) for <a class="link text-cyan-400 after:bg-cyan-400" target="_blank" href="https://taxbackinternational.com/" > Taxback International <a/>, an Irish-based organization specializing in VAT compliance, reclamation, and consultancy.',
+        description: 'Developed a major client application (Vault) and contributed to other two major client applications (Analytics, Comply) for <a class="link text-cyan-600 after:bg-cyan-400" target="_blank" href="https://taxbackinternational.com/" > Taxback International <a/>, an Irish-based organization specializing in VAT compliance, reclamation, and consultancy.',
         points: [
             "Contributes to building a reusable theme library using Angular.",
         ],
@@ -99,8 +99,8 @@ watchEffect(() => {
         <div class="flex flex-col gap-2 items-center justify-center lg:justify-start mb-15 lg:flex-row lg:gap-10 lg:mb-10 ">
             <h3 v-if="showTitle" class="text-3xl text-slate-600">Work Experience</h3>
             <div v-if="showTitle" class="mt-[10px]">
-                <button class="py-1 px-4 border-1 border-emerald-500 rounded-lg 
-                    text-emerald-400 relative cursor-pointer
+                <button class="py-1 px-4 border-1 border-[var(--primary)] rounded-lg 
+                    text-[var(--primary)] relative cursor-pointer
                     transition-all gradient-before">
                     <a target="_blank" href="/Sujith_M_A_Front_End_Engineer_Resume.pdf"
                     download="Sujith_M_A_Front_End_Engineer_Resume">
@@ -112,23 +112,23 @@ watchEffect(() => {
         </div>
         <div class="lg:px-0" v-if="workExperience.length">
             <ul
-                class="relative before:absolute before:top-[10px] before:left-[0] before:border-l-1  before:border-emerald-800 before:h-full ">
+                class="relative before:absolute before:top-[10px] before:left-[0] before:border-l-1  before:border-[var(--primary)] before:h-full ">
                 <TransitionGroup name="fade" tag="li">
                     <li v-for="work in workExperience" :key="work"
-                        class="relative pl-10 before:absolute before:top-[6px] before:left-[-12px] before:h-6 before:w-6 before:border-1 before:border-emerald-800 before:bg-gray-900 before:rounded-full">
+                        class="relative pl-10 before:absolute before:top-[6px] before:left-[-12px] before:h-6 before:w-6 before:border-1 before:border-[var(--primary-dark)] before:bg-zinc-200 before:rounded-full">
                         <div v-if="work" class="flex flex-col gap-1 mb-10">
                             <h4 class="text-2xl font-semibold text-slate-500">{{ work.designation }}</h4>
                             <div class="flex flex-col items-start gap-2 mb-2">
-                                <a class="link text-emerald-600 text-lg after:bg-emerald-400" v-if="work.url"
+                                <a class="link text-[var(--primary-dark)] text-lg after:bg-[var(--primary-dark)]" v-if="work.url"
                                     :href="work.url" target="_blank">
                                     {{ work.organization }}
                                 </a>
-                                <a class="text-emerald-600 text-lg" v-else> {{ work.organization }}</a>
+                                <a class="text-[var(--primary-dark)] text-lg" v-else> {{ work.organization }}</a>
                                 <h5
                                     class="relative pl-5 text-slate-500 text-md before:absolute before:left-[0] before:top-[8px] before:h-2 before:w-2 before:bg-slate-500 before:rounded-full">
                                     {{ work.period }}</h5>
                             </div>
-                            <p class="mb-2" v-html="work.description"></p>
+                            <p class="mb-2 wrap" v-html="work.description"></p>
                             <ul class="pl-10 list-disc mb-4 flex flex-col gap-2">
                                 <li v-for="point of work.points">{{ point }}</li>
                             </ul>
