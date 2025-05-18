@@ -63,7 +63,7 @@ for (let i = 1; i < 6; i++) {
                 <div class="w-[300px] h-[255px] lg:w-[400px] lg:h-[340px]">
                     <Transition name="slideIn">
                         <div v-if="showImage"
-                            class="flex items-center  justify-center w-[300px] h-[255px] lg:w-[400px] lg:h-[340px] awesome-border rounded-[1vw] shadow-xl/30 shadow-emerald-400">
+                            class="flex items-center  justify-center w-[300px] h-[255px] lg:w-[400px] lg:h-[340px] awesome-border rounded-[1vw] shadow-xl/20 shadow-emerald-400">
                             <img class="rounded-[1vw] w-[98%]" src="../assets/Sujith.jpg" alt="Image of Sujith">
                         </div>
                     </Transition>
