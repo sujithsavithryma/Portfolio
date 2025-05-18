@@ -1,5 +1,5 @@
 <template>
-    <footer class="my-10 pb-10" v-if="showTitle">
+    <footer class="my-10 pb-2 px-6 lg:pb-10" v-if="showTitle">
         <p class="text-center text-slate-500 text-md">
             Coded in <a target="_blank" href="https://code.visualstudio.com/" class="link text-slate-300 font-semibold after:bg-emerald-400">Visual Studio Code</a>; Built with 
             <a target="_blank" href="https://vite.dev/" class="link text-slate-300 font-semibold after:bg-emerald-400">Vite</a>, 

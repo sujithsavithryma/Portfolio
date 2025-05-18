@@ -1,7 +1,7 @@
 <script setup>
 import { BsPersonWorkspace } from "vue-icons-plus/bs";
 import { ref, onMounted, onBeforeUnmount } from 'vue'
-import { AiOutlineUser, AiFillMessage, AiFillGithub, AiFillLinkedin } from "vue-icons-plus/ai";
+import { AiOutlineUser, AiFillMessage, AiFillGithub, AiFillLinkedin, AiOutlineMenu, AiFillCloseCircle } from "vue-icons-plus/ai";
 
 const activeLink = ref('');
 const activeIconClass = 'scale-120 text-emerald-400';
@@ -11,6 +11,7 @@ const hoverTextClass = 'group-hover:translate-x-2 group-hover:text-emerald-400 g
 const activeTextColor = 'text-slate-100';
 const inactiveTextColor = 'text-slate-600';
 
+const showMenu = ref(false);
 
 function updateActiveSection() {
     const sections = document.querySelectorAll('.section');
@@ -23,6 +24,11 @@ function updateActiveSection() {
             activeLink.value = section.id;
         }
     });
+}
+
+function toggleMenu() {
+    console.log('toggle menu')
+    showMenu.value = !showMenu.value;
 }
 
 onMounted(() => {
@@ -88,15 +94,51 @@ onBeforeUnmount(() => {
     </header>
 
     <header class="flex sticky top-0 w-full h-[56px] 
-        items-center z-100 px-5 bg-gray-900 shadow-2xl
+        items-center justify-between z-100 px-5 bg-gray-900 shadow-2xl
         lg:hidden xl:hidden 2xl:hidden">
-        <a href="">
+
+        <!-- <button @click.prevent="toggleMenu()">
+            <AiOutlineMenu  />
+        </button>
+         -->
+
+        <a href="" >
             <img class="h-10" src="../assets/logo.svg" alt="Logo">
         </a>
 
-        <div class="flex w-full justify-center ">
-            <nav class="flex gap-10">
-                <ul class="w-max flex gap-10">
+        <h3 class="text-xl text-slate-400 tracking-widest font-sans">SUJITH M A</h3>
+
+        <div>
+            <ul class="relative flex flex-row gap-3">
+                    <li class="hover:text-emerald-400">
+                        <a href="https://www.github.com/sujithsavithryma" target="_blank">
+                            <AiFillGithub />
+                        </a>
+
+                    </li>
+
+                    <li class="hover:text-emerald-400">
+                        <a href="https://www.linkedin.com/in/sujithma/" target="_blank">
+                            <AiFillLinkedin />
+                        </a>
+                    </li>
+                </ul>
+        </div>
+
+        
+
+    </header>
+
+    <!-- <div class="w-[240px] h-screen absolute z-101 bg-gray-800 left-0 top-0 shadow-(--menu-shadow)
+        transition-all" :class="showMenu ? '-translate-x-0' : '-translate-x-100'">
+            <nav class="flex flex-col gap-10">
+                <div class="h-[100px] flex flex-row justify-between items-start px-5 py-5">
+                    <h2>Sujith</h2>
+                    <button @click.prevent="toggleMenu">
+                        <AiFillCloseCircle />
+                    </button>
+                </div>
+                <ul class="w-max flex flex-col gap-10 px-5">
                     <li class="group" :class="[activeLink === '' ? activeTextColor : inactiveTextColor]">
                         <a href="#" class="flex items-center gap-1" @click="activeLink = ''">
                             <span :class="[activeLink === '' ? 'text-emerald-400' : 'hover:text-emerald-400']"
@@ -116,23 +158,8 @@ onBeforeUnmount(() => {
                         </a>
                     </li>
                 </ul>
-                <ul class="relative flex flex-row gap-2">
-                    <li class="hover:text-emerald-400">
-                        <a href="https://www.github.com/sujithsavithryma" target="_blank">
-                            <AiFillGithub />
-                        </a>
-
-                    </li>
-
-                    <li class="hover:text-emerald-400">
-                        <a href="https://www.linkedin.com/in/sujithma/" target="_blank">
-                            <AiFillLinkedin />
-                        </a>
-                    </li>
-                </ul>
+                
             </nav>
-        </div>
-
-    </header>
+    </div> -->
 
 </template>

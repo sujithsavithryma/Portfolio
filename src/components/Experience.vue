@@ -22,11 +22,11 @@ const items = [
     },
     {
         id: 2,
-        designation: 'Senior Engineer - Frontend',
+        designation: 'Senior Engineer - Front End',
         organization: 'Expian Technologies Pvt Ltd (The Scalers)',
         url: 'https://thescalers.com/',
         period: 'Mar 2020 - May 2023',
-        description: 'Started working with a major French retail company, where I performed a comprehensive audit of the front-end codebase. I uncovered key architectural and performance flaws, then redesigned and implemented a robust, optimized structure that served as the foundation for future development.',
+        description: 'Started working with a major French retail company, where I performed a comprehensive audit of the front end codebase. I uncovered key architectural and performance flaws, then redesigned and implemented a robust, optimized structure that served as the foundation for future development.',
         points: [
             "Designed and developed more than 10 web applications.",
             "Designed, developed and implemented a reusable theme library using Angular and Angular Material, resulting in a 40% reduction in development time across multiple projects.",
@@ -67,7 +67,7 @@ const items = [
         organization: 'Codetok Technologies Pvt Ltd',
         url: '',
         period: 'Feb 2015 - Jan 2018',
-        description: 'I was the first employee at Codetok, where I started my front-end journey and picked up Angular from the ground up.',
+        description: 'I was the first employee at Codetok, where I started my front end journey and picked up Angular from the ground up.',
         points: [
             'Actively contributed to the development and deployment of Angular-based web applications.',
             'Designed, built, and launched cross-platform mobile applications using the Ionic framework.',
@@ -95,7 +95,7 @@ watchEffect(() => {
 
 </script>
 <template>
-    <section id="experience" class="section pt-20 lg:pt-10">
+    <section id="experience" class="section pt-20 lg:pt-10 px-6">
         <div class="flex flex-col gap-2 items-center justify-center lg:justify-start mb-15 lg:flex-row lg:gap-10 lg:mb-10 ">
             <h3 v-if="showTitle" class="text-3xl text-slate-400">Work Experience</h3>
             <div v-if="showTitle" class="mt-[10px]">
@@ -110,7 +110,7 @@ watchEffect(() => {
                 </button>
             </div>
         </div>
-        <div class="px-10 lg:px-0" v-if="workExperience.length">
+        <div class="lg:px-0" v-if="workExperience.length">
             <ul
                 class="relative before:absolute before:top-[10px] before:left-[0] before:border-l-1  before:border-emerald-800 before:h-full ">
                 <TransitionGroup name="fade" tag="li">
