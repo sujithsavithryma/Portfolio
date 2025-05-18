@@ -94,7 +94,8 @@ onBeforeUnmount(() => {
     </header>
 
     <header class="flex sticky top-0 w-full h-[56px] 
-        items-center justify-between z-100 px-5 bg-gray-900 shadow-2xl
+        items-center justify-between z-100 px-5 
+        bg-zinc-800 shadow-2xl
         lg:hidden xl:hidden 2xl:hidden">
 
         <!-- <button @click.prevent="toggleMenu()">
@@ -106,10 +107,10 @@ onBeforeUnmount(() => {
             <img class="h-10" src="../assets/logo.svg" alt="Logo">
         </a>
 
-        <h3 class="text-xl text-slate-400 tracking-widest font-sans">SUJITH M A</h3>
+        <h3 class="text-xl text-slate-200 tracking-widest font-sans">SUJITH M A</h3>
 
         <div>
-            <ul class="relative flex flex-row gap-3">
+            <ul class="relative text-slate-200 flex flex-row gap-3">
                     <li class="hover:text-emerald-400">
                         <a href="https://www.github.com/sujithsavithryma" target="_blank">
                             <AiFillGithub />

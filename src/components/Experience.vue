@@ -97,7 +97,7 @@ watchEffect(() => {
 <template>
     <section id="experience" class="section pt-20 lg:pt-10 px-6">
         <div class="flex flex-col gap-2 items-center justify-center lg:justify-start mb-15 lg:flex-row lg:gap-10 lg:mb-10 ">
-            <h3 v-if="showTitle" class="text-3xl text-slate-400">Work Experience</h3>
+            <h3 v-if="showTitle" class="text-3xl text-slate-600">Work Experience</h3>
             <div v-if="showTitle" class="mt-[10px]">
                 <button class="py-1 px-4 border-1 border-emerald-500 rounded-lg 
                     text-emerald-400 relative cursor-pointer
@@ -117,7 +117,7 @@ watchEffect(() => {
                     <li v-for="work in workExperience" :key="work"
                         class="relative pl-10 before:absolute before:top-[6px] before:left-[-12px] before:h-6 before:w-6 before:border-1 before:border-emerald-800 before:bg-gray-900 before:rounded-full">
                         <div v-if="work" class="flex flex-col gap-1 mb-10">
-                            <h4 class="text-2xl font-semibold text-slate-400">{{ work.designation }}</h4>
+                            <h4 class="text-2xl font-semibold text-slate-500">{{ work.designation }}</h4>
                             <div class="flex flex-col items-start gap-2 mb-2">
                                 <a class="link text-emerald-600 text-lg after:bg-emerald-400" v-if="work.url"
                                     :href="work.url" target="_blank">

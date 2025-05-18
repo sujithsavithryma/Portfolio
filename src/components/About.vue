@@ -29,7 +29,7 @@ for (let i = 1; i < 6; i++) {
                         <h4 v-if="item === 1" class="text-emerald-600 text-xl text-center lg:text-left tracking-widest">
                             Hello, I am
                         </h4>
-                        <h1 v-if="item === 2" class="text-8xl font-bold tracking-wide text-slate-400 mb-10 text-center lg:text-left">
+                        <h1 v-if="item === 2" class="text-8xl font-bold tracking-wide  text-slate-600 mb-10 text-center lg:text-left">
                             Sujith.
                         </h1>
                         <!-- <h2 v-if="item === 3" class="text-2xl font-normal text-slate-300 mb-10">front end Engineer</h2> -->
@@ -72,6 +72,7 @@ for (let i = 1; i < 6; i++) {
     
             </div>
         </div>
+
 
     </section>
 </template>

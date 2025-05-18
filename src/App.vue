@@ -15,6 +15,8 @@ import Main from './components/Main.vue'
       <Main />
     </div>
  </div>
+  <!-- <div class="absolute top-0 bottom-0 h-full w-full bg-red-800"></div> -->
+
 </template>
 
 <style scoped>

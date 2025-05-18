@@ -1,5 +1,12 @@
 @import "tailwindcss";
-
+body {
+  /* background: #280e5c;
+  background: linear-gradient(339deg, rgb(44 20 89) 76%, rgb(41 11 85) 74%); */
+  @apply bg-zinc-200 text-slate-500;
+}
+body.dark {
+  @apply bg-linear-[at_76%_75%] from-gray-800 via-gray-900 to-cyan-900 to-90%;
+}
 :root {
   --menu-shadow: -2px 1px 14px var(--color-gray-500);
 }

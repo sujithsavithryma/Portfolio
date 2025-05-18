@@ -12,7 +12,6 @@ function loaded() {
 }
 </script>
 <template>
-    <!-- flex flex-col sm:items-center  -->
     <main class="grid lg:min-w-full">
         <About @loaded="loaded" />
         <Experience :aboutLoaded="aboutLoaded" />
